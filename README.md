@@ -129,7 +129,7 @@ movieshub/
 
 1. **Clone the repo**:
    ```bash
-   git clone https://github.com/yourusername/movieshub.git
+   git clone https://github.com/sudhanshu-j/MoviesHub.git
    cd movieshub
    ```
 2. **Open `index.html` in your favorite browser**.
@@ -182,13 +182,11 @@ Please be respectful and follow the project's Code of Conduct.
 
 ## 💬 Contact & Connect
 
-Created with ❤️ by **Your Name**
+Created with ❤️ by **Sudhanshu Jha**
 
-- GitHub: [@yourusername](https://github.com/yourusername)
+- GitHub: [@sudhanshu-j](https://github.com/sudhanshu-j)
 
-- Email: your.email@example.com
-
-- Twitter: [@yourhandle](https://twitter.com/yourhandle)
+- Email: Sudhanshujha164@gmail.com
 
 Feel free to reach out for collaboration, questions, or just to say hi! 👋
 
