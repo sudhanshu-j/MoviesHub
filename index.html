@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<!-- Declares the document type and version (HTML5) -->
+<html lang="en">
+  <!-- Opens the HTML document and sets language to English -->
+  <head>
+    <!-- Head section for metadata and links -->
+    <meta charset="UTF-8" />
+    <!-- Sets the character encoding to UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Makes the site responsive on all devices -->
+
+    <!-- Links the Materialize CSS framework for UI styling -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css"
+    />
+
+    <!-- Links an external custom stylesheet -->
+    <link rel="stylesheet" href="/style.css" />
+
+    <!-- Links Font Awesome icons for use in the page -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <title>MoviesHub</title>
+    <!-- Sets the title of the web page -->
+  </head>
+
+  <body>
+    <!-- Main content of the page -->
+
+    <!-- Header section with logo, navigation, and search -->
+    <header>
+      <a href="#" class="logo">MoviesHub</a>
+      <!-- Site logo -->
+
+      <ul class="nav">
+        <!-- Navigation menu -->
+        <li>
+          <a href="#">
+            <i class="fa-regular fa-house"></i>
+            <!-- Home icon -->
+          </a>
+        </li>
+        <li><a href="#">New </a></li>
+        <!-- Link to New movies -->
+        <li><a href="#">Top IMDb</a></li>
+        <!-- Link to Top IMDb list -->
+        <li><a href="#">Trending</a></li>
+        <!-- Link to Trending movies -->
+        <li><a href="#">My list</a></li>
+        <!-- Link to user's list -->
+      </ul>
+
+      <div class="search">
+        <!-- Search bar -->
+        <input
+          type="text"
+          placeholder="Search Movie"
+          aria-label="Search movies here"
+        />
+        <i class="fa-regular fa-magnifying-glass"></i>
+        <!-- Search icon -->
+      </div>
+    </header>
+
+    <!-- Main banner that changes with carousel interaction -->
+    <div class="banner">
+      <!-- Featured movie section: Jurassic -->
+      <div class="content jurassic active">
+        <!-- First movie is active by default -->
+        <img src="/images/jurassic-title.png" class="movie-title" />
+        <!-- Movie title image -->
+
+        <h4>
+          <!-- Metadata like year, rating, duration, genre -->
+          <span> 2025 </span>
+          <span><i> PG-13 </i></span>
+          <span> 2h 14min </span>
+          <span> Adventure </span>
+        </h4>
+
+        <p>
+          <!-- Movie description -->
+          Five years post-Jurassic World: Dominion (2022), ...
+        </p>
+
+        <div class="button">
+          <!-- Buttons to Watch or add to list -->
+          <a href="#"><i class="fa-regular fa-play"></i> Watch</a>
+          <a href="#"><i class="fa-regular fa-plus"></i> My list</a>
+        </div>
+      </div>
+
+      <!-- Repeat structure for other movies -->
+      <div class="content Mission-Impossible">
+        <!-- Movie: Mission Impossible -->
+        <img src="/images/Mission-Impossible-title.png" class="movie-title" />
+        <h4>
+          <span> 2025 </span><span><i> PG-13 </i></span> <span> 2h 49min </span
+          ><span> Action </span>
+        </h4>
+        <p>Ethan Hunt and the IMF team continue their search...</p>
+        <div class="button">
+          <a href="#"><i class="fa-regular fa-play"></i> Watch</a>
+          <a href="#"><i class="fa-regular fa-plus"></i> My list</a>
+        </div>
+      </div>
+
+      <!-- Repeat structure for all other movies -->
+      <div class="content Sinners">
+        <!-- Movie: Sinners -->
+        <img src="/images/Sinners-title.png" class="movie-title" />
+        <h4>
+          <span> 2025 </span><span><i> R 18+ </i></span><span> 2h 17min </span
+          ><span> Horror </span>
+        </h4>
+        <p>From Ryan Coogler-director of ...</p>
+        <div class="button">
+          <a href="#"><i class="fa-regular fa-play"></i> Watch</a>
+          <a href="#"><i class="fa-regular fa-plus"></i> My list</a>
+        </div>
+      </div>
+
+      <!-- Other movie blocks follow the same structure -->
+      <div class="content F1-The-Movie">
+        <img src="/images/F1-title.png" class="movie-title" />
+
+        <h4>
+          <span> 2025 </span>
+          <span>
+            <i> PG-13 </i>
+          </span>
+          <span> 2h 35min </span>
+          <span> Sports </span>
+        </h4>
+
+        <p>
+          After a nasty incident almost ended his career, Sonny Hayes has
+          retired from Formula One and now races a Porsche, but when an
+          opportunity comes from the owner of a struggling team, Sonny makes a
+          return to Formula One racing, alongside a hot new rookie teammate
+        </p>
+
+        <div class="button">
+          <a href="#">
+            <i class="fa-regular fa-play"></i>
+            Watch
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-plus"></i>
+            My list
+          </a>
+        </div>
+      </div>
+
+      <div class="content The-Last-Rodeo">
+        <img src="/images/Rodeo-title.png" class="movie-title" />
+
+        <h4>
+          <span> 2025 </span>
+          <span>
+            <i> PG-13 </i>
+          </span>
+          <span> 1h 56min </span>
+          <span> Sports </span>
+        </h4>
+
+        <p>
+          To save his grandson, a retired rodeo star enters a high-stakes
+          bull-riding competition. Along the way, he confronts his past,
+          discovers faith, and proves that true courage lies in family.
+        </p>
+
+        <div class="button">
+          <a href="#">
+            <i class="fa-regular fa-play"></i>
+            Watch
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-plus"></i>
+            My list
+          </a>
+        </div>
+      </div>
+
+      <div class="content the-little-mermaid">
+        <img src="/images/the-little-mermaid-title.png" class="movie-title" />
+
+        <h4>
+          <span> 2023 </span>
+          <span>
+            <i> 12+ </i>
+          </span>
+          <span> 2h 14min </span>
+          <span> Romance </span>
+        </h4>
+
+        <p>
+          The youngest of King Triton's daughters, Ariel is a beautiful and
+          spirited young mermaid with a thirst for adventure. Longing to find
+          out more about the world beyond the sea, Ariel visits the surface and
+          falls for the dashing Prince Eric.
+        </p>
+
+        <div class="button">
+          <a href="#">
+            <i class="fa-regular fa-play"></i>
+            Watch
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-plus"></i>
+            My list
+          </a>
+        </div>
+      </div>
+
+      <div class="content bg-65">
+        <img src="/images/the-65-title.png" class="movie-title" />
+
+        <h4>
+          <span> 2023 </span>
+          <span>
+            <i> 12+ </i>
+          </span>
+          <span> 1h 33min </span>
+          <span> Action </span>
+        </h4>
+
+        <p>
+          After a catastrophic crash, pilot Mills quickly discovers he's
+          actually stranded on an unknown planet. Now, with only one chance at
+          rescue, Mills must make his way across an unknown terrain riddled with
+          dangerous prehistoric creatures in an epic fight to survive.
+        </p>
+
+        <div class="button">
+          <a href="#">
+            <i class="fa-regular fa-play"></i>
+            Watch
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-plus"></i>
+            My list
+          </a>
+        </div>
+      </div>
+
+      <div class="content the-covenant">
+        <img src="/images/the-covenant-title.png" class="movie-title" />
+
+        <h4>
+          <span> 2023 </span>
+          <span>
+            <i> 15+ </i>
+          </span>
+          <span> 2h 3min </span>
+          <span> War </span>
+        </h4>
+
+        <p>
+          Guy Ritchie's The Covenant follows US Army Sergeant John Kinley (Jake
+          Gyllenhaal) and Afghan interpreter Ahmed (Dar Salim). After an ambush,
+          Ahmed goes to Herculean lengths to save Kinley's life. When Kinley
+          learns that Ahmed and his family were not given safe passage to
+          America as promised
+        </p>
+
+        <div class="button">
+          <a href="#">
+            <i class="fa-regular fa-play"></i>
+            Watch
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-plus"></i>
+            My list
+          </a>
+        </div>
+      </div>
+
+      <div class="content the-black-demon">
+        <img src="/images/the-black-demon-title.png" class="movie-title" />
+
+        <h4>
+          <span> 2023 </span>
+          <span>
+            <i> 15+ </i>
+          </span>
+          <span> 1h 40min </span>
+          <span> Horror </span>
+        </h4>
+
+        <p>
+          Paul Sturges takes his family on a trip to Mexico to inspect an oil
+          rig his company owns. Once they get out there, he finds the place
+          almost abandoned with only a few terrified workers left who tell him
+          that the rig has been repeatedly attacked by a monstrous shark that is
+          part of a Mexican legend.
+        </p>
+
+        <div class="button">
+          <a href="#">
+            <i class="fa-regular fa-play"></i>
+            Watch
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-plus"></i>
+            My list
+          </a>
+        </div>
+      </div>
+
+      <div class="content the-tank">
+        <img src="/images/the-tank-title.png" class="movie-title" />
+
+        <h4>
+          <span> 2023 </span>
+          <span>
+            <i> 18+ </i>
+          </span>
+          <span> 1h 40min </span>
+          <span> Mystery </span>
+        </h4>
+
+        <p>
+          Ben and his wife Jules are in for a surprise when they inherit an
+          abandoned coastal property that Ben's recently deceased mother never
+          told them about. Untouched for 40 years the house looms like an eerie
+          relic over land which includes a stunning private cove and beach.
+        </p>
+
+        <div class="button">
+          <a href="#">
+            <i class="fa-regular fa-play"></i>
+            Watch
+          </a>
+
+          <a href="#">
+            <i class="fa-regular fa-plus"></i>
+            My list
+          </a>
+        </div>
+      </div>
+
+      <!-- Carousel section (thumbnails) -->
+      <div class="carousel-box">
+        <div class="carousel">
+          <!-- Carousel container -->
+          <!-- Carousel item - changes background and active movie -->
+          <div
+            class="carousel-item"
+            onclick="changeBg('bg-jurassic.jpg', 'jurassic')"
+          >
+            <img src="/images/movies/jurassic.jpg" alt="" />
+          </div>
+
+          <!-- Repeat for each carousel item -->
+          <div
+            class="carousel-item"
+            onclick="changeBg('bg-Mission-Impossible.jpg', 'Mission-Impossible')"
+          >
+            <img src="/images/movies/Mission-Impossible.jpg" alt="" />
+          </div>
+
+          <div
+            class="carousel-item"
+            onclick="changeBg('bg-Sinners.jpg', 'Sinners')"
+          >
+            <img src="/images/movies/Sinners.jpg" alt="" />
+          </div>
+
+          <div
+            class="carousel-item"
+            onclick="changeBg('bg-F1-The-Movie.jpg', 'F1-The-Movie')"
+          >
+            <img src="/images/movies/F1-The Movie.jpg" alt="" />
+          </div>
+
+          <div
+            class="carousel-item"
+            onclick="changeBg('bg-The-Last-Rodeo.png', 'The-Last-Rodeo')"
+          >
+            <img src="/images/movies/The Last Rodeo.jpg" alt="" />
+          </div>
+
+          <div
+            class="carousel-item"
+            onclick="changeBg('bg-little-mermaid.jpg', 'the-little-mermaid')"
+          >
+            <img src="/images/movies/the-little-mermaid.jpeg" alt="" />
+          </div>
+
+          <div class="carousel-item" onclick="changeBg('bg-65.jpeg', 'bg-65')">
+            <img src="/images/movies/65.jpg" alt="" />
+          </div>
+
+          <div
+            class="carousel-item"
+            onclick="changeBg('bg-the-covenant.jpeg', 'the-covenant')"
+          >
+            <img src="/images/movies/the-covenant.jpg" alt="" />
+          </div>
+
+          <div
+            class="carousel-item"
+            onclick="changeBg('bg-the-black-demon.jpeg', 'the-black-demon')"
+          >
+            <img src="/images/movies/the-black-demon.jpg" alt="" />
+          </div>
+
+          <div
+            class="carousel-item"
+            onclick="changeBg('bg-the-tank.jpeg', 'the-tank')"
+          >
+            <img src="/images/movies/the-tank.jpeg" alt="" />
+          </div>
+        </div>
+
+        <div class="indicators">
+          <!-- Placeholder for carousel indicator dots, filled by JS -->
+          <!-- JavaScript will generate the dots here -->
+        </div>
+      </div>
+
+      <!-- Trailer watch button -->
+      <a href="#" class="play">
+        <i class="fa-regular fa-circle-play"></i>
+        Watch trailer
+      </a>
+
+      <!-- Social media icons -->
+      <ul class="social">
+        <li>
+          <a href="#"><i class="fa-brands fa-square-facebook"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-square-instagram"></i></a>
+        </li>
+        <li>
+          <a href="#"><i class="fa-brands fa-imdb"></i></a>
+        </li>
+      </ul>
+    </div>
+
+    <!-- External JavaScript libraries -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <!-- jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+    <!-- Materialize JS -->
+    <script src="/main.js"></script>
+    <!-- Custom JavaScript file -->
+  </body>
+</html>

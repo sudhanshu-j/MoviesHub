@@ -1,0 +1,400 @@
+/* =========================
+   GOOGLE FONTS IMPORT
+========================= */
+/* Import Poppins font with multiple weights and styles */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+/* =========================
+   GLOBAL RESET & VARIABLES
+========================= */
+/* Reset margin, padding, and set box-sizing for all elements */
+* {
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+  box-sizing: border-box; /* Include padding & border in width/height */
+}
+
+/* CSS variables for colors and fonts */
+:root {
+  --primary: #ff3700; /* Main theme color */
+  --font: "Poppins", sans-serif; /* Font family variable */
+}
+
+/* Body styles */
+body {
+  background: #000; /* Black background */
+  font-family: var(--font); /* Use Poppins font */
+}
+
+/* =========================
+   HEADER SECTION
+========================= */
+/* Main page header container */
+header {
+  position: absolute; /* Fix header to top */
+  top: 0;
+  left: 0;
+  width: 100%; /* Full width */
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Spread child elements */
+  align-items: center; /* Vertical center */
+  padding: 30px 100px; /* Padding inside header */
+  z-index: 10; /* On top of other elements */
+  gap: 20px; /* Space between children */
+  flex-wrap: wrap; /* Wrap on small screens */
+}
+
+/* Logo text in header */
+.logo {
+  font-size: 40px; /* Large text */
+  color: #fff; /* White text */
+  letter-spacing: 1px; /* Space between letters */
+  font-weight: 800; /* Bold weight */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* =========================
+   NAVIGATION MENU
+========================= */
+/* Navigation menu container */
+.nav {
+  display: flex; /* Flex container */
+  align-items: center; /* Vertical align */
+  gap: 15px; /* Space between links */
+  flex-wrap: wrap; /* Wrap on smaller screens */
+}
+
+/* Navigation list items */
+.nav li {
+  list-style: none; /* Remove bullet points */
+  margin: 0; /* Remove margin */
+}
+
+/* Navigation links */
+.nav li a {
+  color: #fff; /* White text */
+  text-decoration: none; /* No underline */
+  font-weight: 500; /* Medium font weight */
+  letter-spacing: 1px; /* Spacing between letters */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: 0.3s; /* Smooth transition on hover */
+  padding: 8px 12px; /* Padding for clickable area */
+  display: block; /* Block display for padding */
+}
+
+/* Hover state for nav links */
+.nav li:hover a {
+  color: var(--primary); /* Primary color on hover */
+}
+
+/* =========================
+   SEARCH BOX
+========================= */
+/* Search box container */
+.search {
+  position: relative; /* For positioning input and icon */
+  width: 300px; /* Fixed width */
+  max-width: 100%; /* Responsive max width */
+  height: 40px; /* Fixed height */
+  flex-shrink: 0; /* Prevent shrinking */
+}
+
+/* Search input field */
+.search input {
+  position: absolute; /* Positioned within container */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  color: #fff; /* White text */
+  background: transparent; /* Transparent background */
+  border: 1px solid rgba(255, 255, 255, 0.5); /* Semi-transparent border */
+  outline: none; /* Remove default outline */
+  border-radius: 4px; /* Rounded corners */
+  padding: 0px 10px 0px 45px !important; /* Padding, left space for icon */
+  backdrop-filter: blur(10px); /* Blur background behind */
+  -webkit-backdrop-filter: blur(10px); /* Safari blur support */
+  box-sizing: border-box; /* Include padding in width */
+}
+
+/* Placeholder text color */
+.search input::placeholder {
+  color: #fff; /* White placeholder */
+}
+
+/* Search icon inside search box */
+.search i {
+  position: absolute; /* Positioned absolutely */
+  top: 50%; /* Vertically center */
+  transform: translateY(-50%); /* Perfect vertical centering */
+  left: 10px; /* Left padding */
+  padding-right: 10px; /* Right padding */
+  color: #fff; /* White icon */
+  border-right: 1px solid #fff; /* Vertical separator line */
+  pointer-events: none; /* Allow clicks through icon */
+}
+
+/* =========================
+   BANNER SECTION
+========================= */
+/* Banner container with background image */
+.banner {
+  position: relative; /* For absolute positioned children */
+  width: 100%; /* Full width */
+  min-height: 100vh; /* Full viewport height */
+  padding: 0px 100px; /* Horizontal padding */
+  display: flex; /* Flex layout */
+  justify-content: space-between; /* Space between content */
+  align-items: center; /* Vertical center */
+  background: url(/images/movies/bg-jurassic.jpg) no-repeat; /* Default background */
+  background-size: cover; /* Cover entire area */
+  background-position: center; /* Center the image */
+  overflow: hidden; /* Hide overflow */
+  transition: 0.5s; /* Smooth transition for background changes */
+}
+
+/* Dark overlay on banner */
+.banner::before {
+  position: absolute; /* Full overlay */
+  content: "";
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+}
+
+/* =========================
+   CONTENT BLOCKS INSIDE BANNER
+========================= */
+/* Movie content container (hidden by default) */
+.content {
+  position: relative; /* Position for inner elements */
+  max-width: 550px; /* Maximum width */
+  display: none; /* Hide by default */
+  visibility: hidden; /* Hide visually */
+  transform: scale(0); /* Shrink out of view */
+  transition: 0.5s; /* Smooth transition */
+}
+
+/* Active content block visible */
+.content.active {
+  display: block; /* Show block */
+  visibility: visible; /* Visible */
+  transform: scale(1); /* Full size */
+  transition: 0.5s; /* Smooth scaling */
+}
+
+/* Container for movie title */
+.movie-title {
+  max-width: 250px; /* Max width for title */
+}
+
+/* Movie subtitle styles */
+.banner .content h4 {
+  color: rgba(255, 255, 255, 0.5); /* Semi-transparent white */
+  font-weight: 400; /* Regular weight */
+  font-size: 30px; /* Font size */
+}
+
+/* Spans inside movie subtitles */
+.banner .content h4 span {
+  padding: 0px 10px; /* Horizontal padding */
+  border-right: 1px solid rgba(255, 255, 255, 0.5); /* Vertical separator */
+}
+
+/* First span - remove left padding */
+.banner .content h4 span:first-child {
+  padding-left: 0;
+}
+
+/* Last span - remove border */
+.banner .content h4 span:last-child {
+  border-right: none;
+}
+
+/* Icon inside subtitle span */
+.banner .content h4 span i {
+  background: var(--primary); /* Primary color background */
+  color: #fff; /* White icon */
+  padding: 0px 8px; /* Padding */
+  display: inline-block; /* Inline block */
+  border-radius: 2px; /* Rounded corners */
+}
+
+/* Paragraph inside content block */
+.banner .content p {
+  font-size: 1em; /* Normal font size */
+  font-weight: 300; /* Light weight */
+  line-height: 1.5; /* Line spacing */
+  color: #fff; /* White text */
+  margin: 10px 0px 20px; /* Margins */
+}
+
+/* Button container inside content */
+.banner .content .button {
+  position: relative; /* For positioning */
+}
+
+/* Button links */
+.banner .content .button a {
+  position: relative;
+  display: inline-block; /* Inline block for padding */
+  margin-right: 10px; /* Space between buttons */
+  background: var(--primary); /* Primary color */
+  color: #fff; /* White text */
+  padding: 6px 20px; /* Padding */
+  text-decoration: none; /* Remove underline */
+  font-weight: 500; /* Medium font */
+  letter-spacing: 1px; /* Letter spacing */
+  text-transform: uppercase; /* Uppercase letters */
+  transition: 0.5s; /* Smooth transition */
+  cursor: pointer; /* Pointer on hover */
+}
+
+/* Second button styling */
+.banner .content .button a:nth-child(2) {
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black */
+  border: rgba(255, 255, 255, 0.2); /* Border */
+}
+
+/* Hover effect on second button */
+.banner .content .button a:hover:nth-child(2) {
+  background: var(--primary); /* Primary color on hover */
+}
+
+/* =========================
+   CAROUSEL BOX & CAROUSEL
+========================= */
+/* Container for carousel */
+.banner .carousel-box {
+  position: relative; /* Positioning context */
+  min-width: 850px; /* Minimum width */
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center carousel */
+  align-items: center; /* Vertical center */
+  background: rgba(0, 0, 0, 0.2); /* Transparent background */
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  border: 1px solid rgba(255, 255, 255, 0.1); /* Border */
+  backdrop-filter: blur(10px); /* Blur behind */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* Carousel container */
+.carousel {
+  position: relative; /* Position relative */
+  height: 400px; /* Fixed height */
+  perspective: 1500px; /* 3D perspective */
+  padding-bottom: 20px; /* Space for scrollbar */
+}
+
+/* Individual carousel items */
+.carousel .carousel-item {
+  width: 250px; /* Fixed width */
+  cursor: pointer; /* Pointer on hover */
+}
+
+/* Images inside carousel items */
+.carousel .carousel-item img {
+  max-width: 235px; /* Max width smaller than item */
+  border-radius: 10px; /* Rounded corners */
+  transform: translateX(8px) translateY(-75px); /* Position adjustment */
+  object-fit: cover; /* Cover image in container */
+  object-position: center; /* Center image */
+}
+
+/* =========================
+   DOT INDICATORS FOR CAROUSEL
+========================= */
+/* Container for dot indicators */
+.indicators {
+  position: absolute; /* Positioned at bottom */
+  bottom: 15px;
+  left: 0;
+  right: 0;
+  display: flex; /* Flex layout */
+  justify-content: center; /* Center dots */
+  gap: 10px; /* Space between dots */
+  z-index: 5; /* Above carousel */
+}
+
+/* Individual dot */
+.indicators span {
+  width: 12px; /* Diameter */
+  height: 12px;
+  background: rgba(255, 255, 255, 0.4); /* Semi-transparent white */
+  border-radius: 50%; /* Circular shape */
+  cursor: pointer; /* Pointer cursor */
+  transition: 0.3s ease; /* Smooth background transition */
+}
+
+/* Active dot indicator */
+.indicators span.active {
+  background: var(--primary); /* Primary color */
+}
+
+/* =========================
+   PLAY BUTTON
+========================= */
+/* Play button container */
+.play {
+  position: absolute; /* Positioned absolutely */
+  bottom: 50px; /* Distance from bottom */
+  left: 100px; /* Distance from left */
+  display: inline-flex; /* Inline flex for alignment */
+  justify-content: flex-start; /* Align items left */
+  align-items: center; /* Vertical center */
+  color: #fff; /* White text */
+  text-decoration: none; /* No underline */
+  text-transform: uppercase; /* Uppercase text */
+  letter-spacing: 1px; /* Spacing between letters */
+  font-weight: 500; /* Medium font */
+  font-size: 1.2em; /* Larger font */
+  cursor: pointer; /* Pointer cursor */
+  transition: 0.3s; /* Smooth transition */
+}
+
+/* Icon inside play button */
+.play i {
+  margin-right: 10px; /* Space after icon */
+  font-size: 40px; /* Large icon */
+  cursor: pointer; /* Pointer cursor */
+}
+
+/* Hover state for play button */
+.play:hover {
+  color: var(--primary); /* Primary color on hover */
+}
+
+/* =========================
+   SOCIAL LINKS
+========================= */
+/* Social links container */
+.social {
+  position: absolute; /* Positioned absolutely */
+  bottom: 50px; /* Distance from bottom */
+  right: 100px; /* Distance from right */
+  display: inline-flex; /* Inline flex container */
+  justify-content: center; /* Center content */
+  align-items: center; /* Vertical center */
+  gap: 25px; /* Space between icons */
+}
+
+/* Individual social links */
+.social a {
+  color: #fff; /* White text */
+  text-decoration: none; /* No underline */
+  text-transform: uppercase; /* Uppercase text */
+  font-weight: 500; /* Medium font */
+  letter-spacing: 1px; /* Letter spacing */
+  font-size: 18px; /* Font size */
+  cursor: pointer; /* Pointer cursor */
+  transition: 0.3s; /* Smooth transition */
+}
+
+/* Hover effect for social links */
+.social a:hover {
+  color: var(--primary); /* Primary color on hover */
+}
