@@ -4,6 +4,14 @@ Welcome to **MoviesHub** — an immersive, interactive movie carousel designed t
 
 ---
 
+## 🔗 Live Demo
+
+Check out the live version of **MoviesHub** in action:
+
+👉 [Live Demo](https://movieshub-dashboard.netlify.app/)
+
+---
+
 ## 🚀 Project Overview
 
 **MoviesHub** combines dynamic backgrounds, movie-specific content blocks, and intuitive user interactions to create a truly engaging movie showcase:
